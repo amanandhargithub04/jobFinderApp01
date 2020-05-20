@@ -15,7 +15,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> implements HomePageView {
   Widget _homePageWidget = _buildInitialLoadingWidget();
-//  HomePagePresenter presenter;
   final providerController = new TextEditingController();
   final positionController = new TextEditingController();
   final locationController = new TextEditingController();
@@ -23,7 +22,6 @@ class _HomePageState extends State<HomePage> implements HomePageView {
   @override
   void initState() {
     super.initState();
-//    presenter = new HomePagePresenter();
     this.widget.presenter.attachView(this);
     this.widget.presenter.fetchJobList();
   }
